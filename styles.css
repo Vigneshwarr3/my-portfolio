@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: black;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    font-weight: normal; /* Change font weight to normal */
+}
+
+.header-left h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header-right ul li {
+    margin-left: 0px;
+}
+
+.header-right ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.header-right ul li a:hover {
+    color: grey; /* Change font color on hover */
+    
+    
+}
+
+/* New styles for divider */
+.divider {
+    margin-left: 2px;
+    margin-right: 2px;
+    border-right: 1px solid lightgrey; /* Change color and style as needed */
+}
+
+
+main {
+    padding: 8rem;
+}
+
+main #home h2, main #about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    
+    color: black;
+}
+
+
+
+main h3 {
+    color: black;
+}
+
+main p {
+    line-height: 1.6;
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+}
+
+main a {
+    color: grey;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: black;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row; /* Display content side by side by default */
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align image to the right by default */
+}
+
+.about-image img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+
+    #home,
+    #about {
+        margin: 20px; /* Adjust margin for smaller screens */
+    }    
+
+    .about-content {
+        flex-direction: column; /* Display content stacked vertically on mobile */
+    }
+
+    .about-image {
+        justify-content: center; /* Center image vertically on mobile */
+    }
+
+    .header-right ul li a span {
+        display: none;
+    }
+    .header-right ul li a::before {
+        
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-right: 5px;
+    }
+    #about-link::before {
+        content: '\f406'; /* Unicode for user icon */
+    }
+    
+    #resume-link::before {
+        content: '\f15c'; /* Unicode for paper icon */
+    }
+
+    #linkedin-icon::before {
+        content: '\f0e1'; /* Unicode for LinkedIn icon */
+    }
+}
+
+
+footer {
+    text-align: left;
+    margin-top: 200px; /* Adjust margin as needed */
+    margin-left: 40px; /* Adjust left margin as needed */
+    color: black; /* Adjust color as needed */
+}
+
+
+#about {
+    display: none;
+    margin: 0rem; /* Adjust the margin as needed */
+}
+
+#about h1 {
+    margin-top: 0; /* Remove default top margin */
+}
+
+.about-text {
+    margin-right: 30px; /* Add bottom margin to create gap */
+}
+
+.line-by-line {
+    opacity: 0;
+    animation: fadeInLineByLine 1s ease forwards;
+}
+
+@keyframes fadeInLineByLine {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
