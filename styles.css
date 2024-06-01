@@ -116,7 +116,7 @@ main a:hover {
 }
 
 /* Media query for mobile devices */
-@media only screen and (max-width: 768px) {
+@media (max-width: 600px) {
 
     #home,
     #about {
