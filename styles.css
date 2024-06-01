@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
     font-family: Montserrat, sans-serif;
     background-color: white;
@@ -17,8 +18,8 @@ header {
 
 .header-left h1 {
     margin: 0;
-    font-size: 1.2rem; /* Adjust font size as needed */
-    font-weight: normal; /* Change font weight to normal */
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
 .header-left h1 a {
@@ -42,35 +43,28 @@ header {
     text-decoration: none;
     padding: 10px 15px;
     display: inline-block;
-    transition: transform 0.3s ease; /* Add transition for smooth effect */
+    transition: transform 0.3s ease;
 }
 
 .header-right ul li a:hover {
-    color: grey; /* Change font color on hover */
-    
-    
+    color: grey;
 }
 
-/* New styles for divider */
 .divider {
     margin-left: 2px;
     margin-right: 2px;
-    border-right: 1px solid lightgrey; /* Change color and style as needed */
+    border-right: 1px solid lightgrey;
 }
 
-
 main {
-    padding: 8rem;
+    padding: 4rem; /* Adjusted padding for better spacing */
 }
 
 main #home h2, main #about h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    
     color: black;
 }
-
-
 
 main h3 {
     color: black;
@@ -98,81 +92,86 @@ main a:hover {
 
 .about-content {
     display: flex;
-    flex-direction: row; /* Display content side by side by default */
+    flex-direction: row;
 }
 
 .about-text {
     flex: 1;
+    margin-right: 30px; /* Add right margin to create gap */
 }
 
 .about-image {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* Align image to the right by default */
+    justify-content: flex-end;
 }
 
 .about-image img {
-    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-width: 100%;
 }
 
 /* Media query for mobile devices */
 @media (max-width: 600px) {
+    main {
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
 
     #home,
     #about {
-        margin: 2px; /* Adjust margin for smaller screens */
-    }    
+        margin: 1rem 0.5rem; /* Adjust margin for smaller screens */
+    }
 
     .about-content {
-        flex-direction: column; /* Display content stacked vertically on mobile */
+        flex-direction: column; /* Stack content vertically */
+        margin: 0; /* Remove margin */
+    }
+
+    .about-text {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1rem; /* Add bottom margin */
     }
 
     .about-image {
-        justify-content: center; /* Center image vertically on mobile */
+        justify-content: center; /* Center image */
     }
 
     .header-right ul li a span {
         display: none;
     }
+
     .header-right ul li a::before {
-        
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
         margin-right: 5px;
     }
+
     #about-link::before {
-        content: '\f406'; /* Unicode for user icon */
+        content: '\f406';
     }
-    
+
     #resume-link::before {
-        content: '\f15c'; /* Unicode for paper icon */
+        content: '\f15c';
     }
 
     #linkedin-icon::before {
-        content: '\f0e1'; /* Unicode for LinkedIn icon */
+        content: '\f0e1';
     }
 }
 
-
 footer {
     text-align: left;
-    margin-top: 200px; /* Adjust margin as needed */
-    margin-left: 40px; /* Adjust left margin as needed */
-    color: black; /* Adjust color as needed */
+    margin-top: 2rem; /* Adjusted margin for better spacing */
+    padding-left: 1rem; /* Adjusted left padding */
+    color: black;
 }
-
 
 #about {
     display: none;
-    margin: 0rem; /* Adjust the margin as needed */
+    margin: 0;
 }
 
 #about h1 {
-    margin-top: 0; /* Remove default top margin */
-}
-
-.about-text {
-    margin-right: 30px; /* Add bottom margin to create gap */
+    margin-top: 0;
 }
 
 .line-by-line {
