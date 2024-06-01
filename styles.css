@@ -160,7 +160,8 @@ main a:hover {
 
 footer {
     text-align: left;
-    margin-top: 2rem; /* Adjusted margin for better spacing */
+    margin-top: 200rem; /* Adjusted margin for better spacing */
+    margin-left: 40px; /* Adjust left margin as needed */
     padding-left: 1rem; /* Adjusted left padding */
     color: black;
 }
