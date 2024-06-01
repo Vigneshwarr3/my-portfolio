@@ -120,7 +120,7 @@ main a:hover {
 
     #home,
     #about {
-        margin: 20px; /* Adjust margin for smaller screens */
+        margin: 2px; /* Adjust margin for smaller screens */
     }    
 
     .about-content {
