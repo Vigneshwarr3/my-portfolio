@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigneshwar R</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const homeSection = document.getElementById('home');
+            const aboutSection = document.getElementById('about');
+            const elements = [...homeSection.children, ...aboutSection.children];
+
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.3}s`;
+                el.classList.add('line-by-line');
+            });
+
+            showHome();
+        });
+
+        function showAbout() {
+            document.getElementById('about').style.display = 'block';
+            document.getElementById('home').style.display = 'none';
+            [...document.getElementById('about').children].forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.3}s`;
+                el.classList.add('line-by-line');
+            });
+        }
+
+        function showHome() {
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('home').style.display = 'block';
+            [...document.getElementById('home').children].forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.3}s`;
+                el.classList.add('line-by-line');
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1><a href="#" onclick="showHome()">Vigneshwar R</a></h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                
+                <li><a href="https://drive.google.com/file/d/1OHUWjk-fgIKUPLjtbmyANPiC0MFzEb4L/view" target="_blank" id="resume-link"><span>Resume</span></a></li>
+		<li><a href="#" onclick="showAbout()" id="about-link"><span>About</span></a></li>
+		<li class="divider"></li> <!-- Divider -->
+                <li><a href="https://www.linkedin.com/in/vigneshwar-r-994b86162/" target="_blank" id="linkedin-icon"><span>LinkedIn</span></a></li>
+
+	    </ul>
+   
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+	    
+            <h2>HELLO 👋🏼</h2>
+            <p>I am Vigneshwar - a Data Analyst 📈 at <a href="https://www.tcs.com/" target="_blank">TCS</a> with a strong aspiration to become a Data Scientist / Research Scientist.</p>
+            <p>Currently pursuing 🧑‍💻 Data Science & Machine Learning Course at <a href="https://www.scaler.com/data-science-course/" target="_blank">Scaler</a>.</p>
+        </section>
+        <section id="about">
+	    <div class="about-content">
+                <div class="about-text">
+                    <h1>NICE TO MEET YOU 🙋🏼‍♂️</h1>
+                    <p>I’m Vigneshwar - a data analyst with a strong aspiration to become a data scientist or a research scientist from Chennai, India. With 3+ years of experience in this field, I specialise in building custom automation solutions using Python and its libraries.</p>
+                    <h4>My Journey</h4>
+                    <p>Though I work as a Data analyst now, I did my undergrad in Mechanical Engineering from <a href="https://www.annauniv.edu/dme/" target="_blank">College of Engineering Guindy, Anna University</a>. My enthusiasm for computer science and the opportunities that I got while working at TCS has driven my career path towards Data Science. To enhance my skills, I enrolled in a professional data science certification course with Scaler, where I gained invaluable knowledge.</p>
+	           <br>
+	           <br>
+                   <p>✌️<br>Vigneshwar R</p>
+		</div>
+	       <div class="about-image">
+                <img src="https://images.shiksha.com/mediadata/images/1547804056phpGT8DhX.jpeg" alt="College of Engineering Guindy">
+               </div>
+            </div>
+        </section>
+    </main>
+
+<footer>
+    <p>👨‍🎨 + 👷‍♂️ by me</p>
+    <p>Last updated June 01 '24</p>
+</footer>
+
+</body>
+</html>
