@@ -128,11 +128,11 @@ main a:hover {
 
     .about-text {
         margin-right: 0; /* Remove right margin */
-        margin-bottom: 1rem; /* Add bottom margin */
     }
 
     .about-image {
         justify-content: center; /* Center image */
+        margin-bottom: 5rem
     }
 
     .header-right ul li a span {
@@ -160,7 +160,7 @@ main a:hover {
 
 footer {
     text-align: left;
-    margin-top: 23rem; /* Adjusted margin for better spacing */
+    margin-top: 18rem; /* Adjusted margin for better spacing */
     margin-left: 10px; /* Adjust left margin as needed */
     padding-left: 1rem; /* Adjusted left padding */
     color: black;
@@ -171,14 +171,11 @@ footer {
     margin: 0;
 }
 
-#about h1 {
-    margin-top: 0;
-}
-
 .line-by-line {
     opacity: 0;
-    animation: fadeInLineByLine 1s ease forwards;
+    animation: fadeInLineByLine 0.5s ease forwards;
 }
+
 
 @keyframes fadeInLineByLine {
     from {
