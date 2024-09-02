@@ -1,0 +1,246 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Mukta", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    color: black;
+}
+
+/* Desktop navigation */
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 2vh;
+    padding: 2rem;
+}
+
+.nav-links {
+    gap: 1rem;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkolivegreen;
+}
+
+.logo a{
+    font-size: 1.1rem;
+    color: darkolivegreen;
+
+}
+
+.logo:hover {
+    cursor:default;
+}
+
+.divider {
+    border-right: 1px solid lightgrey;
+}
+
+#home {
+    line-height: 2.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+#home-text {
+    margin-top: 5rem;
+    text-align: justify;
+}
+
+#home-text h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#home a {
+    text-decoration: underline;
+}
+
+
+#about a {
+    text-decoration: underline;
+}
+
+#home-img {
+    width: 750px;
+    height: auto; /* Allows the image to scale proportionally */
+    float: right;
+    bottom: 0rem;
+    right: 0rem;
+    position: absolute;
+}
+
+#projects {
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    line-height: 2;
+}
+
+#about {
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    line-height: 2;
+
+}
+.about-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; /* Vertically center align */
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+    margin-right: 30px; /* Add right margin to create gap */
+}
+
+.about-image {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.about-image img {
+    max-width: 100%; /* Set maximum width to fill its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show-line {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.7s;
+}
+
+.show-line-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+footer {
+    position: relative;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: lightgrey; 
+}
+
+
+#projects h1{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#description{
+    text-align: justify;
+    line-height: 1.6rem;
+    margin: 0 80px 50px 0px; /* top right bottom left*/
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    justify-content: center;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 75px;
+}
+
+.project-card {
+    width: auto; /* Set the width */
+    height: 300px; /* Set the height */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 1.5px solid #ddd;
+
+    opacity: 0; /* Initial opacity set to 0 */
+}
+
+/* CSS for the fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+
+.project-image img {
+    width: 100%;
+    height: auto;
+}
+
+.project-content {
+    padding: 15px;
+}
+
+.project-content h3 {
+    text-align: left;
+    margin: 0 0 10px 10px; /* top right bottom left*/
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.project-content p {
+    text-align: left;
+    font-size: 0.9rem;
+    margin: 0 0 10px 10px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.project-content img {
+    width: auto;
+    height: 150px;
+    margin: 0 10px 10px 0; /* top right bottom left*/
+}

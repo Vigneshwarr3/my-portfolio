@@ -1,97 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vigneshwar R</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="icon" href="favicon1.png" type="image/png">
-        <script>
-            
-            document.addEventListener("DOMContentLoaded", function() {
-                const homeSection = document.getElementById('home');
-                const aboutSection = document.getElementById('about');
-                const elements = [...homeSection.children, ...aboutSection.children];
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigneshwar's Portfolio</title>
+    <meta name="description" content="Vigneshwar is a Data Analyst and a graduate student at Indiana University. He has strong aspiration to become a Data Scientist.">
+    <meta name="keywords" content="Vigneshwar R, College of Engineering Guindy, Indiana University, Indiana University Indianapolis, Data Science, Data Analyst, Data Scientist">
+    <link rel="canonical" href="https://vigneshwarr.com">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vigneshwarr.com">
+    <meta property="og:title" content="Vigneshwar R">
+    <meta name="og:description" content="Vigneshwar is a Data Analyst and a graduate student at Indiana University. He has strong aspiration to become a Data Scientist.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav id = "desktop-nav">
+        <div class = "logo"><a href="#home" onclick="showSection(event, 'home')">Vigneshwar R</a></div>
+        <div>
+            <ul class = "nav-links">
+                <li><a href="./assets/Vigneshwar_R resume-DS.pdf" target="_blank"><i class="fas fa-file-alt"></i><span class="link-text">Resume</span></a></li>
+                <li><a href="#projects" onclick="showProjectsSection(event, 'projects')"><i class="fas fa-laptop-code"></i><span class="link-text">Projects</span></a></li>
+                <li><a href="#about" onclick="showSection(event, 'about')"><i class="fas fa-user"></i><span class="link-text">About</span></a></li>
+                <li class="divider"></li> <!-- Divider -->
+                <li><a href="https://www.linkedin.com/in/vigneshwarravirao/" target="_blank"><i class="fab fa-linkedin-in"></i><span class="link-text">LinkedIn</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id = "home">
+        <div id = "home-text">
+            <br>
+            <h1>HELLO 👋🏼</h1>
+            <p>I'm Vigneshwar, a graduate student 🎓 at <a href="https://luddy.indianapolis.iu.edu/degrees/masters/data-science/index.html" target="_blank">Indiana University Indianapolis</a> 🏛️ majoring in Applied Data Science.</p>
+            <p>Also I'm pursuing a professional certification in Data Science & Machine Learning 🤖 through <a href="https://www.scaler.com/data-science-course/?no_redirect=true#curriculum" target="_blank">Scaler</a>.</p>
+            <p>Previously, I worked as a Data Analyst 📈 at <a href="https://www.tcs.com/" target="_blank">TCS</a> 🏢 for nearly 4 years.</p>
+        </div>
 
-                elements.forEach((el, index) => {
-                    el.style.animationDelay = `${index * 0.3}s`;
-                    el.classList.add('line-by-line');
-                });
+            <div>
+                <img id = "home-img" src = "assets/vignesh.svg" alt="intro"/>
+            </div> 
 
-                showHome();
-            });
-
-            function showHome() {
-                document.getElementById('about').style.display = 'none';
-                document.getElementById('home').style.display = 'block';
-                [...document.getElementById('home').children].forEach((el, index) => {
-                    el.style.animationDelay = `${index * 0.3}s`;
-                    el.classList.add('line-by-line');
-                });
-            }
-
-            function showAbout() {
-                document.getElementById('about').style.display = 'block';
-                document.getElementById('home').style.display = 'none';
-
-                const elements = about.querySelectorAll('*');
-                elements.forEach((el, index) => {
-                    el.style.animationDelay = `${index * 0.3}s`;
-                    el.classList.remove('line-by-line'); // Reset animation
-                    void el.offsetWidth; // Trigger reflow to restart animation
-                    el.classList.add('line-by-line'); // Apply animation
-                });
-            }
-
-        </script>
-    </head>
-    <body>
-        <header>
-            <div class="header-left">
-                <h1><a href="#" onclick="showHome()">Vigneshwar R</a></h1>
-            </div>
-            <nav class="header-right">
-                <ul>    
-                    <li><a href="https://drive.google.com/file/d/1OHUWjk-fgIKUPLjtbmyANPiC0MFzEb4L/view" target="_blank" id="resume-link"><span>Resume</span></a></li>
-                    <li><a href="#" onclick="showAbout()" id="about-link"><span>About</span></a></li>
-                    <li class="divider"></li> <!-- Divider -->
-                    <li><a href="https://www.linkedin.com/in/vigneshwar-r-994b86162/" target="_blank" id="linkedin-icon"><span>LinkedIn</span></a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="home">
-                <br>
-                <br>
-                <br>
-                <h2>HELLO 👋🏼</h2>
-                <p>I am Vigneshwar - a Data Analyst 📈 at <a href="https://www.tcs.com/" target="_blank">TCS</a> with a strong aspiration to become a Data Scientist / Research Scientist.</p>
-                <p>Currently pursuing 🧑‍💻 Data Science & Machine Learning Course at <a href="https://www.scaler.com/data-science-course/" target="_blank">Scaler</a>.</p>
-                <p>And an incoming Masters student majoring in Applied Data Science at <a href="https://luddy.indianapolis.iu.edu/degrees/masters/data-science/index.html" target="_blank">Indiana University Indianapolis</a>.</p>
-            </section>
-            <section id="about">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h1>NICE TO MEET YOU 🙋🏼‍♂️</h1>
-                        <p>I am Vigneshwar - a data analyst with a strong aspiration to become a data scientist or a research scientist from Chennai, India. With 3+ years of experience in this field, I specialise in building custom automation solutions using Python and its libraries.</p>
-                        <h4>My Journey</h4>
-                        <p>
-                            Though I work as a Data analyst now, I did my undergrad in Mechanical Engineering from <a href="https://www.annauniv.edu/dme/" target="_blank">College of Engineering Guindy, Anna University</a>. My enthusiasm for computer science and the opportunities that I got while working at TCS has driven my career path towards Data Science. To enhance my skills, I enrolled in a professional data science certification course with Scaler, where I gained invaluable knowledge.
-                            <br><br>
-                            ✌️<br>Vigneshwar R
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <img src="CEG.jpeg" alt="CEG">
-                    </div>
+    </section>
+    <section id="projects" class="hidden">
+        <h1>MY PROJECTS 📝</h1>
+        <p id="description">Explore a collection of my most impactful projects, showcasing my skills in data analysis. Each project highlights my problem-solving abilities and commitment to leveraging data for innovative solutions. Click on any project to learn more about my approach, methodologies, and outcomes.</p>
+        <div class="projects-container">
+            <div class="project-card" data-url="https://github.com/your-repo-2">
+                <div class="project-content">
+                    <img src="/assets/mysql.png" alt="MySQL">
+                    <h3>Target Data Analysis</h3>
+                    <p>Analyzed Target's sales data using SQL in Big Query and found actionable insights and recommendations.</p>
                 </div>
-            </section>
-        </main>
-
-    <footer>
-        <p>👨‍🎨 + 👷‍♂️ by me <br> Last updated June 01 '24</p>
-    </footer>
-
-    </body>
+            </div>
+            <div class="project-card" data-url="https://github.com/Vigneshwarr3/Exploratory-Data-Analysis?tab=readme-ov-file">
+                <div class="project-content">
+                    <img src="/assets/eda.png" alt="EDA using Python">
+                    <h3>Netflix EDA</h3>
+                    <p>Conducted EDA and found actionable insights that would boost traction on the platform.</p>
+                </div>
+            </div>
+            <!-- Repeat for more projects -->
+        </div>
+    </section>
+    <section id = "about", class="about-section hidden">
+        <div class="about-image">
+            <img src="/assets/CEG.jpeg" alt="CEG" width="600" height="200">
+        </div>
+        <div class="about-text">
+            <h1>NICE TO MEET YOU 🙋🏼‍♂️</h1>
+            <p>I am Vigneshwar - a data analyst with a strong aspiration to become a data scientist or a research scientist from Chennai, India. With 3+ years of experience in this field, I specialise in building custom automation solutions using Python and its libraries.</p>
+            <h3>My Journey</h3>
+            <p>
+                Though I work as a Data analyst now, I did my undergrad in Mechanical Engineering from <a href="https://www.annauniv.edu/dme/" target="_blank">College of Engineering Guindy, Anna University</a>. My enthusiasm for computer science and the opportunities that I got while working at TCS has driven my career path towards Data Science. To enhance my skills, I enrolled in a professional data science certification course with Scaler, where I gained invaluable knowledge.
+                <br><br>
+                ✌️<br>Vigneshwar R
+            </p>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,0 +1,146 @@
+/* Base styles for larger screens */
+@media (min-width: 750px) {
+    .link-text {
+        display: inline;
+    }
+
+    .nav-links a i {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #home h1, p {
+        margin-bottom: 1rem;
+    }
+
+    #home-img {
+        width: calc(100vw - 5px); /* Reduce image width gradually as screen width decreases */
+    }
+
+    #home-text {
+        line-height: 1.5rem;
+        margin-top: 1rem;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .about-text {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        margin-right: 0px;
+    }
+    .about-text h1, p {
+        margin-bottom: 1rem;
+    }
+
+    #about {
+        margin-top: 1rem;
+        line-height: 1.5;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+        list-style: none;
+        font-size: 0.9rem;
+    }
+    .logo {
+        font-size: 1.1rem;
+    }
+    footer {
+        font-size: 0.9rem;
+        margin-bottom: 0.1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .link-text {
+        display: none;
+    }
+
+    .nav-links a i {
+        display: inline;
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-section {
+        flex-direction: column; /* Change flex-direction to column */
+    }
+
+    .projects-container {
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px;
+        justify-content: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    #projects {
+        margin-top: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    #projects h1{
+        margin-bottom: 1rem;
+    }
+
+    #description{
+        margin: 0 0 50px 0; /* top right bottom left*/
+        text-align: left;
+        line-height: 1.4rem;
+        margin-bottom: 50px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .project-content h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .project-content p {
+        text-align: left;
+        font-size: 0.8rem;
+    }
+
+    .project-card {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 600px; /* Optional: limit the max width on small screens */
+        width: auto; /* Set the width */
+        height: 300px; /* Set the height */
+    }
+    footer {
+        font-size: 0.9rem;
+        margin-bottom: 0.1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
