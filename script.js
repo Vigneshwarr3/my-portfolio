@@ -1,11 +1,19 @@
+// Show the home section on page load
+document.addEventListener('DOMContentLoaded', () => {
+    showSection(new Event('load'), 'home');
+});
+
 let currentSectionId = 'home'; // Track the current visible section
 
 function showSection(event, sectionId) {
     event.preventDefault();
 
-    // If the clicked section is already visible, do nothing
-    if (sectionId === currentSectionId) {
-        return;
+    // Check if the event is defined and is a click event
+    if (event && event.type === 'click') {
+        // If the clicked section is already visible, do nothing
+        if (sectionId === currentSectionId) {
+            return;
+        }
     }
 
     // Hide all sections
@@ -34,26 +42,9 @@ function showSection(event, sectionId) {
 
     // Update the current section ID
     currentSectionId = sectionId;
+
+    
 }
-
-
-
-// Show the home section on page load
-document.addEventListener('DOMContentLoaded', () => {
-    showSection(new Event('load'), 'home');
-});
-
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', () => {
-        window.location.href = card.getAttribute('data-url');
-    });
-});
-
-
-
-
-
-
 
 
 // JavaScript function to show the projects section and hide other sections
