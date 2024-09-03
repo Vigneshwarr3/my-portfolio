@@ -1,10 +1,3 @@
-// Show the home section on page load
-document.addEventListener('DOMContentLoaded', () => {
-    showSection(new Event('load'), 'home');
-});
-
-
-
 function showSection(event, sectionId) {
     event.preventDefault();
 
@@ -27,7 +20,7 @@ function showSection(event, sectionId) {
     selectedSection.classList.remove('hidden');
 
     // Apply line-by-line animation
-    const elements = selectedSection.querySelectorAll('p, h1, h3, img');
+    const elements = selectedSection.querySelectorAll('p, h1, h3, #about-img');
     elements.forEach(element => {
         element.classList.remove('show-line-visible'); // Reset the visibility class
         element.classList.add('show-line'); // Ensure the initial hidden state is applied
@@ -41,9 +34,7 @@ function showSection(event, sectionId) {
     });
 
     // Update the current section ID
-    currentSectionId = sectionId;
-
-    
+    currentSectionId = sectionId;  
 }
 
 
@@ -72,5 +63,8 @@ function showProjectsSection(event, sectionId) {
     currentSectionId = sectionId;
 }
 
-
+// Show the home section on page load
+document.addEventListener('DOMContentLoaded', () => {
+    showSection(new Event('load'), 'home');
+});
 
