@@ -1,3 +1,10 @@
+// Show the home section on page load
+document.addEventListener('DOMContentLoaded', () => {
+    showSection(new Event('load'), 'home');
+});
+
+let currentSectionId = 'home'; // Track the current visible section
+
 function showSection(event, sectionId) {
     event.preventDefault();
 
