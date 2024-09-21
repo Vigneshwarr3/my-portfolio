@@ -28,7 +28,7 @@
 
     .about-text {
         line-height: 1.5rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin-right: 0px;
     }
     .about-text h1, p {
@@ -43,7 +43,7 @@
     .nav-links {
         gap: 0.5rem;
         list-style: none;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     .logo {
         font-size: 1.1rem;
@@ -97,7 +97,7 @@
 
     #projects {
         margin-top: 0.4rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     #projects h1{
@@ -128,7 +128,7 @@
 
     .project-content p {
         text-align: left;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .project-card {
@@ -139,7 +139,7 @@
     }
     footer {
         font-size: 0.9rem;
-        margin-bottom: 0.1rem;
+        /* margin-bottom: 0.1rem; */
         padding-left: 1rem;
         padding-right: 1rem;
     }
