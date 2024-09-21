@@ -133,7 +133,7 @@ a:hover {
 .about-image img {
     max-width: 100%; /* Set maximum width to fill its container */
     height: auto; /* Maintain aspect ratio */
-   
+    text-align: center;
     margin-bottom: 50px;
     /* border-radius: 10px; Adjust the value as needed */
 }
