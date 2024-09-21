@@ -16,7 +16,7 @@
     }
 
     #home-img {
-        width: min(calc(100vw - 5px), 530px); /* Reduce image width gradually as screen width decreases */
+        width: max(calc(100vw - 5px), 530px); /* Reduce image width gradually as screen width decreases */
     }
 
     #home-text {
