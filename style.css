@@ -47,7 +47,7 @@ a:hover {
 }
 
 .logo a{
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: darkolivegreen;
 
 }
@@ -62,8 +62,8 @@ a:hover {
 
 #home {
     line-height: 2.5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 #home-text {
@@ -97,15 +97,15 @@ a:hover {
 #projects {
     text-align: center;
     margin-top: 5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     line-height: 2;
 }
 
 #about {
     margin-top: 5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     line-height: 2;
 
 }
@@ -153,7 +153,7 @@ footer {
     position: relative;
     text-align: left;
     margin-top: auto;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
     padding-left: 2rem;
     padding-right: 2rem;
     color: lightgrey; 
