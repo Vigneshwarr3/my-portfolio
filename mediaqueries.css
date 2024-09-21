@@ -50,7 +50,7 @@
     }
     footer {
         font-size: 0.9rem;
-        margin-bottom: 0.1rem;
+        /* margin-bottom: 0.1rem; */
         padding-left: 1rem;
         padding-right: 1rem;
     }
