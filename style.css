@@ -64,8 +64,8 @@ a:hover {
 
 #home {
     line-height: 2.5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 #home-text {
@@ -99,22 +99,22 @@ a:hover {
 #projects {
     text-align: center;
     margin-top: 5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     line-height: 2;
 }
 
 #about {
     margin-top: 5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     line-height: 2;
 
 }
 .about-section {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center; /* Vertically center align */
+    align-items: top; /* Vertically center align */
 }
 
 .about-text {
@@ -125,13 +125,17 @@ a:hover {
 
 .about-image {
     flex: 1;
-    justify-content: flex-end;
+    text-align: center;
+    justify-content: right;
+    
 }
 
 .about-image img {
     max-width: 100%; /* Set maximum width to fill its container */
     height: auto; /* Maintain aspect ratio */
+   
     margin-bottom: 50px;
+    /* border-radius: 10px; Adjust the value as needed */
 }
 
 .hidden {
