@@ -27,7 +27,7 @@ function showSection(event, sectionId) {
     selectedSection.classList.remove('hidden');
 
     // Apply line-by-line animation
-    const elements = selectedSection.querySelectorAll('p, h1, h3, #about-img');
+    const elements = selectedSection.querySelectorAll('p, h1, h2, h3, #about-img, .project-card');
     elements.forEach(element => {
         element.classList.remove('show-line-visible'); // Reset the visibility class
         element.classList.add('show-line'); // Ensure the initial hidden state is applied
@@ -35,40 +35,22 @@ function showSection(event, sectionId) {
 
     // Re-apply the visible class with a delay for animation
     elements.forEach((element, index) => {
+
+        if (element.classList.contains("project-card")) {
+            setTimeout(() => {
+                element.classList.add('show-line-visible');
+            }, index * 100); // Adjust the timing as needed
+        }
+
         setTimeout(() => {
             element.classList.add('show-line-visible');
-        }, index * 250); // Adjust the timing as needed
+        }, index * 250); // Adjust the timing as needed    
     });
 
     // Update the current section ID
     currentSectionId = sectionId;  
 }
 
-
-// JavaScript function to show the projects section and hide other sections
-function showProjectsSection(event, sectionId) {
-    event.preventDefault(); // Prevent default link behavior
-    
-    // Hide all sections except the projects section
-    var sections = document.querySelectorAll('section');
-    sections.forEach(function(section) {
-        if (section.id === sectionId) {
-            section.classList.remove('hidden'); // Show projects section
-        } else {
-            section.classList.add('hidden'); // Hide other sections
-        }
-    });
-
-    // Add fade-in animation to project cards
-    var projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(function(card, index) {
-        setTimeout(function() {
-            card.classList.add('fade-in');
-        }, index * 150); // Add a delay for each card to create a stagger effect
-    });
-
-    currentSectionId = sectionId;
-}
 
 // Show the home section on page load
 document.addEventListener('DOMContentLoaded', () => {

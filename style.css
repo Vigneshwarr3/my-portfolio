@@ -12,7 +12,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
     overflow-x: hidden; /* Prevent horizontal scrolling issues */
 }
 
@@ -51,37 +50,38 @@ a:hover {
 .logo a{
     font-size: 1.15rem;
     color: darkolivegreen;
-
 }
 
 .logo:hover {
     cursor:default;
 }
 
+
 .divider {
     border-right: 1px solid lightgrey;
 }
 
-#home {
-    line-height: 2.5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+#home{
+    padding: 20px;
+    margin-left: 30px;
+
+    line-height: 2.5;
 }
 
-#home-text {
-    margin-top: 5rem;
-    text-align: justify;
+#about, #projects{
+    padding: 20px;
+    margin-left: 30px;
+    margin-top: 40px;
+    line-height: 1.8;
 }
 
 #home-text h1{
     font-size: 2rem;
-    margin-bottom: 10px;
 }
 
-#home a {
+#home  a {
     text-decoration: underline;
 }
-
 
 #about a {
     text-decoration: underline;
@@ -98,19 +98,8 @@ a:hover {
 
 #projects {
     text-align: center;
-    margin-top: 5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    line-height: 2;
 }
 
-#about {
-    margin-top: 5rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    line-height: 2;
-
-}
 .about-section {
     display: flex;
     flex-direction: row-reverse;
@@ -153,19 +142,6 @@ a:hover {
     transform: translateY(0);
 }
 
-
-
-footer {
-    position: relative;
-    text-align: left;
-    margin-top: auto;
-    /*margin-bottom: 1rem;*/
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: lightgrey; 
-}
-
-
 #projects h1{
     text-align: left;
     margin-bottom: 20px;
@@ -201,25 +177,10 @@ footer {
     opacity: 0; /* Initial opacity set to 0 */
 }
 
-/* CSS for the fade-in animation */
-.fade-in {
-    opacity: 0;
-    animation: fadeInAnimation 1s ease forwards;
-}
-
-@keyframes fadeInAnimation {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .project-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);  /* Deeper shadow */
 }
-
 
 .project-image img {
     width: 100%;
@@ -232,7 +193,7 @@ footer {
 
 .project-content h3 {
     text-align: left;
-    margin: 0 0 10px 10px; /* top right bottom left*/
+
     font-size: 1.1rem;
     color: #333;
 }
@@ -240,7 +201,7 @@ footer {
 .project-content p {
     text-align: left;
     font-size: 0.9rem;
-    margin: 0 0 10px 10px;
+
     color: #666;
     line-height: 1.5;
 }
@@ -249,4 +210,24 @@ footer {
     width: auto;
     height: 150px;
     margin: 0 10px 10px 0; /* top right bottom left*/
+}
+
+/* Initially hide the project cards */
+.project-card {
+    opacity: 0;
+    transform: translateY(20px);  /* Start from slightly below */
+    transition: opacity 0.6s ease, transform 1s ease;  /* Smoother transition */
+}
+
+/* Reveal the project card as a whole */
+.project-card.show-line-visible {
+    opacity: 1;
+    transform: translateY(0);  /* Move the entire card up to its final position */
+}
+
+/* Keep the content inside the project card (like img, h3, p) static without animation */
+.project-content h3, .project-content p{
+    opacity: 1;
+    transform: none;  /* No movement */
+    transition: none;  /* No animation */
 }
