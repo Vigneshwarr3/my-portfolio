@@ -126,26 +126,112 @@
         margin-bottom: 10px;
     }
 
-    .project-content h3 {
-        font-size: 1rem;
-        line-height: 1.2;
-    }
-
-    .project-content p {
-        text-align: left;
-        font-size: 0.9rem;
-    }
-
     .project-card {
-        flex: 1 1 100%; /* Full width on small screens */
-        max-width: 600px; /* Optional: limit the max width on small screens */
-        width: auto; /* Set the width */
-        height: 300px; /* Set the height */
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 2px;
+        background: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
     }
+    
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    
+    .project-header .icon {
+        font-size: 1.2em;
+    }
+    
+    .project-header .project-type {
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #666;
+    }
+    
+    .project-header .project-date {
+        font-size: 0.8em;
+        color: #aaa;
+    }
+    
+    .project-card h3 {
+        font-size: 1.2em;
+        margin: 8px 0;
+        font-weight: bold;
+    }
+    
+    .project-card p {
+        font-size: 0.9em;
+        color: #333;
+        line-height: 1.5;
+    }
+    
+    .project-card .blog-link {
+        color: #d50000;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    
+    .tags {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+        font-family: "Inconsolata", serif;
+    }
+    
+    .tag {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.85em;
+        padding: 0.5px 10px;
+        border-radius: 20px;
+        background: #f0f0f0;
+        color: grey;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tag-icon {
+        font-size: 0.7em;
+    }
+    
     footer {
         font-size: 0.9rem;
         /*margin-bottom: 0.1rem;*/
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .tag-buttons {
+        display: flex;
+        flex-wrap: wrap; /* Enables wrapping of tags */
+        width: 300px; /* Constrains the total width of the flex container */
+        gap: 12px; /* Spacing between tags */
+        margin-top: 16px;
+        margin-bottom: 30px;
+        justify-content: left; /* Optional: Align the grid to the center */
+        
+    }
+    
+    .tag-button {
+        display: flex;
+        align-items: center;
+        justify-content: left; /* Centers content inside the tag */
+        gap: 6px; /* Space between icon and text */
+        font-size: 0.85em;
+        height: 25px; /* Sets a consistent height for each tag */
+        border-radius: 20px;
+        background: #f0f0f0;
+        color: grey;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: none;
+        text-align: center; /* Ensures text is centered */
+        overflow: hidden; /* Prevents text overflow */
+        white-space: nowrap; /* Prevents wrapping of text inside the tag */
+        font-family: "Inconsolata", serif;
+        padding: 6px 10px;
     }
 }

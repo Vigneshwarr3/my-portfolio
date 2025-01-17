@@ -32,33 +32,51 @@
     <section id = "home" class="hidden">
         <div id = "home-text">
             <h1>Hello World 👋🏼</h1>
-            <p>I'm Vigneshwar, a graduate student 🎓 at <a href="https://luddy.indianapolis.iu.edu/degrees/masters/data-science/index.html" target="_blank">Indiana University Indianapolis</a> 🏛️ majoring in Applied Data Science.</p>
-            <p>Also I'm pursuing a professional certification in Data Science & Machine Learning 🤖 through <a href="https://www.scaler.com/data-science-course/?no_redirect=true#curriculum" target="_blank">Scaler</a>.</p>
-            <p>Previously, I worked as a Data Analyst 📈 at <a href="https://www.tcs.com/" target="_blank">TCS</a> 🏢 for nearly 4 years.</p>
+            <p>I'm Vigneshwar, a graduate student 🎓 at <a href="https://luddy.indianapolis.iu.edu/degrees/masters/data-science/index.html" target="_blank">Indiana University Indianapolis</a> 🏛️ majoring in Data Science.</p>
+            <p>Also I'm working as a Research Assistant 🧑🏻‍💻 under <a href="https://luddy.indianapolis.iu.edu/contact/profile/ming-jiang" target="_blank">Dr. Ming Jiang</a>, on NLP 💬 research projects.</p>
+            <p>Previously, I worked as a Data Analyst 📈 at <a href="https://www.tcs.com/" target="_blank">TCS</a> 🏢 for 4 years.</p>
         </div>
 
             <div>
                 <img id = "home-img" src = "assets/vignesh.svg" alt="intro"/>
+                <!-- 
+                <span class = "double-arrow">
+                    <img src="https://img.icons8.com/?size=100&id=60662&format=png&color=000000" alt="Down Arrow" style="width: 50px; height: 50px; animation: fadeIn 1s ease-out 2s forwards;"" />
+                </span>  How to add an arrow here and make it appear after few seconds the home page is loaded? 
+                -->
             </div> 
 
     </section>
     <section id="projects" class="hidden">
-        <h1>MY PROJECTS 📝</h1>
+        <h1>Check out my works 📝</h1>
+        <h2 style="text-align: left;" >Include</h2>
+        <!-- Filter -->
+        <div id="tag-buttons" class="tag-buttons">
+            <!-- Tag buttons will be dynamically added here -->
+        </div>
+
         <div class="projects-container">
             <div class="project-card" data-url="https://github.com/Vigneshwarr3/Data-Analysis-using-SQL/blob/main/SQL%20Business%20Case%20Study.pdf" onclick="window.location.href=this.getAttribute('data-url');">
-                <div class="project-content">
-                    <img id = "project-img" src="/assets/mysql.png" alt="MySQL">
+                <div class = "project-content">
                     <h3>Target Data Analysis</h3>
                     <p>Analyzed Target's sales data using SQL in Big Query and found actionable insights.</p>
+                    <div class="tags">
+                        <div class="tag"> <span> 📚 SQL</span> </div>
+                    </div>
                 </div>
-            </div>
+            </div>       
+            
             <div class="project-card" data-url="https://github.com/Vigneshwarr3/Exploratory-Data-Analysis/blob/main/Netflix%20CaseStudy.pdf" onclick="window.location.href=this.getAttribute('data-url');">
-                <div class="project-content">
-                    <img id = "project-img" src="/assets/eda.png" alt="EDA using Python">
+                <div class = "project-content">
                     <h3>Netflix EDA</h3>
                     <p>Conducted EDA and found actionable insights that would boost traction on the platform.</p>
+                    <div class="tags">
+                        <div class="tag"> <span>🐍 Python</span> </div>
+                        <div class="tag"> <span>🐼 Pandas</span> </div>
+                    </div>
                 </div>
-            </div>
+            </div> 
+            
             <!-- Repeat for more projects -->
         </div>
     </section>
@@ -67,16 +85,15 @@
             <img id="about-img" src="/assets/Vigneshwar.jpg" alt="Vigneshwar R" width="500" height="200">
         </div>
         <div class="about-text">
-            <h1>NICE TO MEET YOU 🙋🏼‍♂️</h1>
+            <h1>Nice to meet you 🙋🏼‍♂️</h1>
             <p>I'm Vigneshwar - a Data analyst with 4 years of experience, with a strong aspiration to become a Data Scientist, currently pursuing masters in applied data science at <a href="https://luddy.indianapolis.iu.edu/degrees/masters/data-science/index.html" target="_blank">IU Indy</a>.</p>
             <br>
             <h3>My Journey</h3>
-            <p>I actually started out as a Mechanical Engineering graduate from <a href="https://www.auegov.ac.in/Department/mech" target="_blank">College of Engineering Guindy, Anna University</a>. After completing my degree, I joined TCS as a Bill of Materials (BOM) Analyst. I quickly pivoted to a Data Analyst role, after gaining basic data skills through <a href="https://www.scaler.com/data-science-course/?no_redirect=true#curriculum" target="_blank">Scaler</a>. Over the years, I’ve developed skills in automation, data analysis and data visualisation using Tableau, along with programming in Python, SQL, and VBA.</p>
+            <p>I actually started out as a Mechanical Engineering graduate from <a href="https://www.auegov.ac.in/Department/mech" target="_blank">College of Engineering Guindy, Anna University</a>. After completing my degree, I joined TCS as a Bill of Materials (BOM) Analyst. I quickly pivoted to a Data Analyst role, after gaining basic data skills through <a href="https://www.scaler.com/data-science-course/?no_redirect=true#curriculum" target="_blank">Scaler</a>. Over the years, I’ve developed skills in automation, data analysis and data visualization using Tableau, along with programming in Python, SQL, and VBA.</p>
             <br>
             <p>While working as a Data Analyst, I observed how companies are striving to automate their processes and find business solutions using AI and ML. This intrigued me and sparked my curiosity about the field, which ultimately led me to pursue a master’s degree in it.</p>
             <br>
             <p>Please feel free to connect or reach out to me through <a href="https://www.linkedin.com/in/vigneshwarravirao/" target="_blank">LinkedIn</a>.</p>
-            <br>
             <br>
             <p>✌️
                 <br>
