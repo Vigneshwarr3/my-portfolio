@@ -185,7 +185,7 @@ a:hover {
 .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 70px;
+    gap: 25px;
     justify-content: center;
     margin-left: 75px;
     margin-right: 75px;
@@ -195,7 +195,7 @@ a:hover {
 .project-card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 2px;
+    padding: 1px;
     background: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 500px;
