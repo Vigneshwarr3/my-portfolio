@@ -1,8 +1,3 @@
-// Show the home section on page load
-document.addEventListener('DOMContentLoaded', () => {
-    showSection(new Event('load'), 'home');
-});
-
 let currentSectionId = 'home'; // Track the current visible section
 
 function showSection(event, sectionId) {
@@ -59,32 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Populate the tag buttons dynamically
-window.onload = function () {
-    const tags = new Set();
-    document.querySelectorAll('.project-card .tags .tag span:last-child').forEach(tagElement => {
-        tags.add(tagElement.textContent.trim());
-    });
 
-    const tagButtonsContainer = document.getElementById('tag-buttons');
-    
-    // Add "All" button
-    const allButton = document.createElement('button');
-    allButton.textContent = 'All';
-    allButton.className = 'tag-button';
-    allButton.setAttribute('data-tag', 'all');
-    allButton.onclick = () => filterProjects('all');
-    tagButtonsContainer.appendChild(allButton);
-
-    // Add individual tag buttons
-    tags.forEach(tag => {
-        const button = document.createElement('button');
-        button.textContent = tag;
-        button.className = 'tag-button';
-        button.setAttribute('data-tag', tag);
-        button.onclick = () => filterProjects(tag);
-        tagButtonsContainer.appendChild(button);
-    });
-};
 
 // Keep track of selected tags
 const selectedTags = new Set();
